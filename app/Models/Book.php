@@ -23,9 +23,9 @@ class Book extends Model
 
 
     const PROGRESS_STATUSES_READABLE = [
-        self::AVAILABILITY_STATUS_AVAILABLE => 'available',
-        self::AVAILABILITY_STATUS_NOT_AVAILABLE => 'not_available',
-        self::AVAILABILITY_STATUS_MISSING => 'missing',
+        self::AVAILABILITY_STATUS_AVAILABLE => 'Available',
+        self::AVAILABILITY_STATUS_NOT_AVAILABLE => 'Not Available',
+        self::AVAILABILITY_STATUS_MISSING => 'Missing',
     ];
 
 }

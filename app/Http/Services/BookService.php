@@ -77,7 +77,7 @@ class BookService
 
         try{
 
-            $allowedColumns = ['id', 'title', 'author', 'created_at'];
+            $allowedColumns = ['id', 'title', 'author', 'availability', 'created_at'];
             $filter = in_array($filter, $allowedColumns) ? $filter : 'id';
 
             $direction = in_array(strtolower($direction), ['asc', 'desc']) ? $direction : 'asc';

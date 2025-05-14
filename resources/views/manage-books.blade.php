@@ -26,7 +26,7 @@
                     Title: <p>{{ $book->title }}</p>
                     Author: <p>{{ $book->author }}</p>
                     Description: <p>{{ $book->description }}</p>
-                    Availability: <p>{{ $book->availability }}</p>
+                    Availability: <p>{{ \App\Models\Book::PROGRESS_STATUSES_READABLE[$book->availability] }}</p>
                 </article>
             @endforeach
 

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\BookUser;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +13,6 @@ class BookUserSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        BookUser::factory(100)->create();
     }
 }

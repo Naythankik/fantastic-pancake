@@ -13,6 +13,19 @@ class Book extends Model
     protected $fillable = [
         'title',
         'author',
-        'description'
+        'description',
+        'availability'
     ];
+
+    const AVAILABILITY_STATUS_AVAILABLE = 0;
+    const AVAILABILITY_STATUS_NOT_AVAILABLE = 1;
+    const AVAILABILITY_STATUS_MISSING = 2;
+
+
+    const PROGRESS_STATUSES_READABLE = [
+        self::AVAILABILITY_STATUS_AVAILABLE => 'available',
+        self::AVAILABILITY_STATUS_NOT_AVAILABLE => 'not_available',
+        self::AVAILABILITY_STATUS_MISSING => 'missing',
+    ];
+
 }

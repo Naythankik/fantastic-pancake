@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Book;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -19,7 +20,8 @@ class BookFactory extends Factory
         return [
             'title' => fake()->userName(),
             'author' => fake()->name(),
-            'description' => fake()->sentence()
+            'description' => fake()->sentence(),
+            'availability' => array_rand(Book::PROGRESS_STATUSES_READABLE)
         ];
     }
 }

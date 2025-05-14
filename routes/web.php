@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Models\Book;
 use Illuminate\Support\Facades\Route;
@@ -20,4 +21,5 @@ Route::prefix('/tech-champions')->middleware('auth')->group(function () {
         $users = \App\Models\User::get();
         return view('manage-books', ['users' => $users]);
     });
+    Route::get('user/{userId}', [AdminController::class, 'getUserBorrowedBooksThisMonth']);
 });

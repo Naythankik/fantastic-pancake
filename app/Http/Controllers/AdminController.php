@@ -10,7 +10,7 @@ class AdminController extends Controller
 {
     //
 
-    public function getUser($userId)
+    public function getUserBorrowedBooksThisMonth($userId)
     {
         return BookUser::where('user_id', $userId)
             ->whereMonth('created_at', now()->month)

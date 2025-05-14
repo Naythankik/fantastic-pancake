@@ -16,5 +16,8 @@ Route::prefix('/tech-champions')->middleware('auth')->group(function () {
         $books = Book::get();
         return view('manage-books', ['books' => $books]);
     });
-    Route::get('books/{userId}', [\App\Http\Controllers\AdminController::class, 'getUser']);
+    Route::get('users', function (){
+        $users = \App\Models\User::get();
+        return view('manage-books', ['users' => $users]);
+    });
 });
